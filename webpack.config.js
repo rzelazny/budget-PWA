@@ -3,11 +3,11 @@ const path = require('path');
 
 const config = {
   entry: {
-    app: './assets/js/index.js',
+    app: './public/assets/js/index.js',
   },
   output: {
-    path: __dirname + '/dist',
-    filename: '[name].bundle.js',
+    path: __dirname + '/public//dist',
+    filename: 'index.bundle.js',
   },
   mode: 'development',
   module: {
@@ -28,7 +28,7 @@ const config = {
     new WebpackPwaManifest({
       fingerprints: false,
       name: 'Budget tracker app',
-      short_name: 'Newsy',
+      short_name: 'Budget',
       description: 'An application for tracking your budget.',
       background_color: '#01579b',
       theme_color: '#ffffff',
@@ -36,7 +36,7 @@ const config = {
       start_url: '/',
       icons: [
         {
-          src: path.resolve('assets/images/icons/icon-192x192.png'),
+          src: path.resolve('public/assets/images/icons/icon-192x192.png'),
           sizes: [192, 512],
           destination: path.join('assets', 'icons'),
         },
